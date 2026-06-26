@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belleza & Aroma</title>
+    <!-- SEO meta tags -->
+    <meta name="description"
+        content="Tienda online de productos de belleza y aroma. Compra cosméticos y perfumes de alta calidad con carrito persistente.">
+    <meta property="og:title" content="Belleza & Aroma - Tienda online de cosméticos y perfumes" />
+    <meta property="og:description"
+        content="Descubre productos de belleza y aromas de alta calidad. Compra online con carrito persistente." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost:8000/index.html" />
+    <meta property="og:image" content="favicon.svg" />
+    <meta name="author" content="Cesar Augusto Scremin">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Favicon personalizado de frasco de perfume -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Appbar con navegación dentro del header -->
+    <header class="site-header">
+        <div class="container appbar">
+            <div class="brand">
+                <h1 class="logo">Belleza & Aroma</h1>
+                <p class="tagline">Cosméticos y perfumería seleccionados</p>
+            </div>
+            <nav class="site-nav">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-label" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- Capa para cerrar al hacer clic fuera -->
+                <label for="menu-toggle" class="menu-overlay"></label>
+                <ul class="nav-list">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#reseñas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <!-- Botón del carrito en el header con indicador dinámico -->
+            <div class="cart-header-btn-wrap">
+                <button id="cart-toggle-btn" class="cart-toggle-btn" aria-label="Ver carrito">
+                    <svg class="cart-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span id="cart-badge" class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de inicio con fondo degradado -->
+        <section id="inicio" class="hero">
+            <!-- Comentario: Hero con background aplicado desde CSS -->
+            <div class="container hero-content">
+                <h2>Bienvenidx a nuestra tienda</h2>
+                <p>Productos premium de cosmética y perfumes para cada ocasión.</p>
+            </div>
+        </section>
+
+        <!-- Multimedia: video integrado mediante iframe (YouTube) -->
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Video demo" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <!-- Sección de Productos: carrusel de tarjetas -->
+        <section id="productos" class="products-section alternate-bg-2">
+            <div class="container">
+                <h3>Productos Destacados</h3>
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <!-- Card 1 -->
+                        <article class="card">
+                            <img src="https://production.na01.natura.com/on/demandware.static/-/Sites-natura-ar-storefront-catalog/default/dw3779938e/PRODUTOS/NATARG-203401_2.jpg?sw=600&q=80"
+                                alt="Crema Hidratante para el Cuerpo Ekos Castaña 400 ml">
+                            <h4>Crema Hidratante para el Cuerpo Ekos Castaña 400 ml</h4>
+                            <p>Piel 100% más nutrida con la potencia antirresequedad de la castaña.*</p>
+                            <p class="small">*porcentaje de participantes con resultados positivos en la evaluación del
+                                atributo mencionado.</p>
+                            <button class="btn">Comprar</button>
+                        </article>
+                        <!-- Card 2 -->
+                        <article class="card">
+                            <img src="https://production.na01.natura.com/on/demandware.static/-/Sites-natura-ar-storefront-catalog/default/dwbd993644/PRODUTOS/NATARG-64746_2.jpg?sw=600&q=80"
+                                alt="Eau de Parfum Femenino Meu Primeiro Humor 75ml">
+                            <h4>Eau de Parfum Femenino Meu Primeiro Humor 75ml</h4>
+                            <p>El toque frutal que transforma el día.</p>
+                            <button class="btn">Comprar</button>
+                        </article>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Sección de Reseñas: organizada con Grid -->
+        <section id="reseñas" class="reviews-section alternate-bg-3">
+            <div class="container">
+                <h3>Reseñas de Clientes</h3>
+                <div class="reviews">
+                    <blockquote class="review">"Me encanta la crema, mi piel se siente increíble."<cite>- Ana</cite>
+                    </blockquote>
+                    <blockquote class="review">"El perfume dura todo el día, muy recomendable."<cite>- Carlos</cite>
+                    </blockquote>
+                    <blockquote class="review">"Excelente atención y envío rápido."<cite>- María</cite></blockquote>
+                    <blockquote class="review">"Productos de alta calidad y precios justos."<cite>- Lucía</cite>
+                    </blockquote>
+                    <blockquote class="review">"La mejor tienda de cosméticos que he visitado."<cite>- Juan</cite>
+                    </blockquote>
+                    <blockquote class="review">"Fragancias únicas y muy elegantes."<cite>- Elena</cite>
+                    </blockquote>
+                </div>
+        </section>
+
+        <!-- Sección de Contacto con formulario funcional (Formspree) -->
+        <section id="contacto" class="contact-section alternate-bg-4">
+            <div class="container">
+                <h3>Contacto</h3>
+                <!-- Comentario: Formulario envía a Formspree -->
+                <div class="contact-panel">
+                    <form action="https://formspree.io/f/mjglnkla" method="POST" class="contact-form">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Escribe aquí tu consulta"
+                            required></textarea>
+
+                        <input type="hidden" name="_subject" value="Nuevo contacto desde la web">
+
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer con información básica -->
+    <footer class="site-footer alternate-bg-5">
+        <div class="container footer-inner">
+            <p>© 2026 Belleza & Aroma — Desarrollado por <a href="https://www.instagram.com/cesarscremindesign/"
+                    target="_blank" rel="noopener noreferrer">Cesar Augusto Scremin</a>.</p>
+            <nav>
+                <ul class="footer-links">
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Panel deslizable del carrito (Cart Drawer) -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Mi Carrito</h3>
+            <button id="cart-close-btn" class="cart-close-btn" aria-label="Cerrar carrito">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items-container">
+            <!-- Se rellenará dinámicamente con JavaScript -->
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+            <button id="cart-checkout-btn" class="btn btn-checkout">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Capa oscura de fondo (Overlay) para el carrito -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- Contenedor para Notificaciones Flotantes (Toasts) -->
+    <div id="toast-container" class="toast-container" role="status" aria-live="polite"></div>
+
+    <!-- Script JavaScript para interactividad completa -->
+    <script src="script.js"></script>
+</body>
+
+</html>
